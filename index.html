@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#10223F">
+<meta name="description" content="NOVA Academy, an interactive adult-facing preview of an AI classroom experience with a teacher-controlled animated robot and creative learning studios.">
+<title>NOVA Academy | AI Classroom OS</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <aside class="sidebar" id="sidebar">
+   <div class="brand"><div class="brand-mark"><span>✳</span></div><div><strong>NOVA<span class="brand-accent">.</span></strong><small>ACADEMY</small></div></div>
+   <div class="sidebar-scroll">
+    <div class="side-label">DISCOVER</div>
+    <button class="nav active" data-page="overview"><span class="nav-icon">⌂</span><span>Overview</span></button>
+    <button class="nav" data-page="classroom"><span class="nav-icon">▣</span><span>Live classroom</span><span class="nav-pill">TRY</span></button>
+    <button class="nav" data-page="curriculum"><span class="nav-icon">▤</span><span>Curriculum</span></button>
+    <button class="nav" data-page="studios"><span class="nav-icon">✦</span><span>Creative studios</span></button>
+    <div class="side-label side-gap">MANAGEMENT PREVIEW</div>
+    <button class="nav" data-page="teacher"><span class="nav-icon">◫</span><span>Teacher console</span></button>
+    <button class="nav" data-page="students"><span class="nav-icon">◇</span><span>Student portfolio</span></button>
+    <button class="nav" data-page="parents"><span class="nav-icon">♡</span><span>Parent portal</span></button>
+    <button class="nav" data-page="admin"><span class="nav-icon">▦</span><span>School admin</span></button>
+    <button class="nav" data-page="authoring"><span class="nav-icon">✎</span><span>Lesson authoring</span></button>
+    <div class="side-label side-gap">INFORMATION</div>
+    <button class="nav" data-page="trust"><span class="nav-icon">⬡</span><span>Trust & readiness</span></button>
+   </div>
+   <div class="side-foot"><div class="avatar avatar-purple">DA</div><div><b>Demo Administrator</b><span>Future Horizons Academy</span></div><span class="side-foot-dots">⋯</span></div>
+  </aside>
+  <div class="main-shell">
+   <header class="topbar"><button class="icon-button mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button><div class="breadcrumbs">NOVA ACADEMY <span>/</span> <b id="crumb">Overview</b></div><div class="top-actions"><a href="live-classroom.html" style="border:1px solid #bedddc;background:#e6f9f4;color:#173861;border-radius:999px;padding:9px 13px;font-size:12px;font-weight:800;text-decoration:none;white-space:nowrap">🎙 Talk to NOVA</a><div class="demo-badge"><span class="pulse-dot"></span> ADULT DEMO · SYNTHETIC DATA</div><button class="help-button" id="helpBtn" aria-label="About this demo">?</button><div class="top-avatar">DA</div></div></header>
+   <main id="main" tabindex="-1"></main>
+  </div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="modal" class="modal-root" aria-live="polite"></div>
+<script src="curriculum-data.js"></script><script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>

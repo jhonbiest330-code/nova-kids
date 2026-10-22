@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101e38">
+<title>NOVA | Conversational AI Classroom</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="live-classroom.css">
+</head>
+<body>
+<div id="shell">
+  <header class="globalbar">
+    <a href="index.html" class="brand" aria-label="Back to NOVA Academy"><span class="brand-icon">✳</span><span>NOVA<span class="brand-point">.</span><small>ACADEMY</small></span></a>
+    <div class="lesson-meta"><span class="tiny-label">NOW TEACHING</span><strong id="lessonTitleTop">Create an Imaginary Animal</strong><span id="gradeChip" class="grade-chip">GRADE 3</span></div>
+    <div class="global-actions"><span class="safety-flag">ADULT PREVIEW · FICTIONAL CLASS</span><button class="top-round" id="fullscreenBtn" title="Projector mode" aria-label="Toggle fullscreen">⛶</button><a class="back-link" href="index.html">Dashboard ↗</a></div>
+  </header>
+  <main class="workspace">
+    <section class="lesson-pane" aria-label="Lesson presentation">
+      <div class="stagebar"><div class="stage-label"><span class="stage-dot"></span><b id="teachingMode">PREVIEW MODE</b><span id="stageStatus">Ready to begin</span></div><div class="stage-actions"><select id="lessonChoice" aria-label="Choose demonstration lesson"></select><span id="stepCounter">LESSON 01 / 12</span></div></div>
+      <div id="stage" class="stage">
+        <div class="stage-motif motif-1"></div><div class="stage-motif motif-2"></div>
+        <div class="slide-content">
+          <div class="eyebrow"><span class="star">✳</span> <span id="slideEyebrow">TODAY'S ADVENTURE</span></div>
+          <h1 id="slideTitle">Ready to make something amazing?</h1>
+          <p id="slideDescription">NOVA guides every step and gives you time to think, answer, and ask questions.</p>
+          <div id="slideVisual" class="slide-visual"></div>
+          <div id="stageChoices" class="stage-choices"></div>
+        </div>
+        <div class="stage-bottom"><span id="learningPill">✦ Imagine · Think · Create · Evaluate</span><span id="slideNumber">01 / 12</span></div>
+      </div>
+      <div class="progress-track" id="progressTrack" aria-label="Lesson steps"></div>
+      <div class="stage-controls"><div class="control-group"><button class="subtle-btn" id="previousBtn">← Previous</button><button class="subtle-btn" id="nextBtn">Next slide →</button><button class="subtle-btn" id="restartBtn">↺ Restart</button></div><div class="control-group"><label class="autotoggle"><input type="checkbox" id="autopilot" checked><span class="toggle-track"></span><span>Auto-teach</span></label><span class="countdown" id="countdown"></span></div></div>
+    </section>
+    <aside class="teacher-pane">
+      <div class="teacher-heading"><div><span class="tiny-label purple-label">YOUR AI TEACHER</span><h2>Meet NOVA <span class="sparkle">✴</span></h2></div><span class="ai-badge">AI · NOT HUMAN</span></div>
+      <div class="character-arena" id="characterArena">
+        <div class="halo halo-a"></div><div class="halo halo-b"></div>
+        <svg id="novaRobot" viewBox="0 0 400 420" role="img" aria-label="NOVA, an animated rounded teal-and-white classroom robot with symmetrical eyes and moving mouth">
+          <defs><linearGradient id="botWhite" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#dce9f9"/></linearGradient><linearGradient id="botBlue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#74e2d4"/><stop offset="1" stop-color="#20afb9"/></linearGradient><linearGradient id="faceDark" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#283e64"/><stop offset="1" stop-color="#10213f"/></linearGradient><filter id="botShadow"><feDropShadow dx="0" dy="15" stdDeviation="13" flood-color="#527caa" flood-opacity=".22"/></filter></defs>
+          <ellipse cx="200" cy="384" rx="105" ry="16" fill="#5574a3" opacity=".12"/>
+          <g id="novaBody" filter="url(#botShadow)">
+            <path d="M165 83 Q200 59 235 83" fill="none" stroke="#2d5176" stroke-width="12" stroke-linecap="round"/><circle cx="200" cy="67" r="18" fill="#51d3c7" stroke="white" stroke-width="8"/>
+            <g class="arm left-arm"><path d="M115 242 Q65 252 67 300" stroke="url(#botWhite)" stroke-width="32" stroke-linecap="round" fill="none"/><circle cx="67" cy="301" r="21" fill="#59d4cb" stroke="white" stroke-width="7"/></g>
+            <g class="arm right-arm"><path d="M285 242 Q333 234 343 282" stroke="url(#botWhite)" stroke-width="32" stroke-linecap="round" fill="none"/><circle cx="343" cy="282" r="21" fill="#59d4cb" stroke="white" stroke-width="7"/></g>
+            <rect x="121" y="223" width="158" height="126" rx="62" fill="url(#botWhite)" stroke="#d2e3f3" stroke-width="4"/>
+            <rect x="167" y="270" width="66" height="33" rx="16" fill="url(#botBlue)"/><circle cx="200" cy="286" r="6" fill="white"/><path d="M161 339 V363 M239 339 V363" stroke="#c4d7e9" stroke-width="22" stroke-linecap="round"/>
+            <rect x="80" y="91" width="240" height="177" rx="84" fill="url(#botWhite)" stroke="#cddfee" stroke-width="4"/>
+            <rect x="105" y="112" width="190" height="132" rx="59" fill="url(#faceDark)"/>
+            <circle cx="147" cy="164" r="27" fill="#eefdfc" opacity=".95"/><circle cx="253" cy="164" r="27" fill="#eefdfc" opacity=".95"/>
+            <circle id="pupilL" cx="152" cy="169" r="12" fill="#2db9c5"/><circle id="pupilR" cx="258" cy="169" r="12" fill="#2db9c5"/>
+            <circle cx="156" cy="163" r="4" fill="#fff"/><circle cx="262" cy="163" r="4" fill="#fff"/>
+            <path id="mouthSmile" d="M177 204 Q200 224 223 204" fill="none" stroke="#53ded1" stroke-width="8" stroke-linecap="round"/>
+            <g id="mouthSpeech" opacity="0"><rect x="181" y="200" width="9" height="15" rx="4" fill="#4fe3cd"/><rect x="196" y="196" width="9" height="23" rx="4" fill="#4fe3cd"/><rect x="211" y="201" width="9" height="13" rx="4" fill="#4fe3cd"/></g>
+            <circle cx="106" cy="201" r="8" fill="#90f0d9" opacity=".6"/><circle cx="294" cy="201" r="8" fill="#90f0d9" opacity=".6"/>
+          </g>
+          <g class="thought-stars"><path d="M331 121 l6 17 17 6 -17 6 -6 17 -6 -17 -17 -6 17 -6Z" fill="#f2c15f"/><circle cx="64" cy="139" r="6" fill="#99a2ff"/><circle cx="321" cy="73" r="5" fill="#55d6cd"/></g>
+        </svg>
+        <div class="robot-pose" id="robotPose">Ready to explore</div>
+      </div>
+      <div class="voice-card" aria-live="polite"><div class="voice-icon" id="voiceIcon">✦</div><div class="voice-center"><b id="voiceStatus">Prepared and ready</b><small id="voiceSubtitle">Start the lesson to begin.</small></div><div class="sound-bars" id="soundBars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
+      <div id="teacherLine" class="speech-card" aria-live="polite">“Hello, thinkers! Shall we discover something new together?”</div>
+      <div class="teacher-actions"><button id="startBtn" class="start-btn">▶ &nbsp;Start lesson</button><button id="pauseBtn" class="pause-btn" disabled title="Pause or resume">Ⅱ</button><button id="stopBtn" class="stop-btn" disabled title="Stop and disconnect">■</button></div>
+      <div class="mode-switch"><button id="guidedModeBtn" class="mode-chip selected">✦ Guided preview</button><button id="liveModeBtn" class="mode-chip">◉ Live AI voice</button></div>
+      <div class="voice-selector"><label for="voiceSelect">Realtime AI voice</label><select id="voiceSelect"><option value="marin">Marin · clear &amp; warm</option><option value="cedar">Cedar · calm &amp; natural</option><option value="coral">Coral · bright</option><option value="sage">Sage · measured</option></select></div><div class="mic-row"><button id="micBtn" class="mic-btn" disabled>♩ &nbsp;Enable microphone</button><span id="micStatus" class="mic-muted">Mic OFF</span></div>
+      <div class="qa-box"><div class="qa-title"><b>Ask NOVA anything about this lesson</b><span>↗</span></div><form id="questionForm" class="question-form"><input id="questionInput" placeholder="Type a question or answer…" autocomplete="off" maxlength="400" aria-label="Type a lesson-related question"><button type="submit" title="Send">➤</button></form><div class="quick-prompts"><button data-ask="Can you explain that with an example?">Give an example</button><button data-ask="I don't understand. Can you explain more simply?">Explain simply</button><button data-ask="Can we go to the next slide?">Next slide</button></div></div>
+      <div class="privacy-note">🔒 Adult testing only. No real children, student accounts, or recordings. Teacher supervision and child-specific protections are required before classroom use.</div>
+    </aside>
+  </main>
+  <footer class="bottomline"><div><span class="green-dot"></span> <span id="connectionIndicator">Guided preview is ready</span></div><div id="sessionLabel">Synthetic records · No microphone until enabled</div></footer>
+</div>
+<div id="permissionModal" class="modal-overlay" hidden><div class="modal-card"><span class="tiny-label purple-label">LIVE AI VOICE SETUP</span><h2>Connect NOVA’s realtime voice</h2><p>This feature is for an <b>adult operator testing the system</b>. Voice conversations use the OpenAI Realtime API and may incur API charges. The microphone starts OFF.</p><label class="consent"><input type="checkbox" id="adultConsent"> I confirm I am an adult testing with fictional students and I will not allow children’s voices or personal information in this session.</label><div class="modal-actions"><button id="cancelLive">Cancel</button><button id="confirmLive" disabled>Connect voice</button></div></div></div>
+<script src="data.js"></script><script src="live-classroom.js"></script>
+</body></html>

@@ -1,0 +1,12 @@
+{
+  "name": "nova-academy-private-voice-demo",
+  "private": true,
+  "version": "2.2.0",
+  "description": "Protected adult-only classroom demonstration with OpenAI Realtime voice",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

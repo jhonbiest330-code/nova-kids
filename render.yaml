@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: nova-academy-demo
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: NODE_VERSION
+        value: 22
+      - key: NODE_ENV
+        value: production
+      - key: OPENAI_REALTIME_MODEL
+        value: gpt-realtime-2.1
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: DEMO_ACCESS_PASSWORD
+        sync: false
